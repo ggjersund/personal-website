@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 django = "*"
 gunicorn = "*"
+pytest = "*"
+coverage = "*"
+coveralls = "*"
 
 [dev-packages]
 

@@ -1,0 +1,18 @@
+language: python
+cache: pip
+python:
+  - 3.7
+
+# Install dependencies
+install:
+  - pip install pipenv
+  - pipenv install --ignore-pipfile --deploy
+
+# Run tests
+script:
+  - coverage run --source='.' -m pytest
+  - coverage report -m
+
+# Report code coverage
+after_success:
+  - coveralls

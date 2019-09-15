@@ -24,7 +24,7 @@ COPY ./Pipfile /usr/src/dist/Pipfile
 COPY ./Pipfile.lock /usr/src/dist/Pipfile.lock
 
 # Install any needed packages specified in the Pipfile.lock
-RUN pipenv install --system --ignore-pipfile --dev
+RUN pipenv install --system --ignore-pipfile --deploy
 
 # Copy entrypoint.prod.sh
 COPY ./conf/entrypoint.prod.sh /usr/src/dist/conf/entrypoint.prod.sh
