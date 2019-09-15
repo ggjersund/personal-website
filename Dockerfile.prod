@@ -27,10 +27,10 @@ COPY ./Pipfile.lock /usr/src/dist/Pipfile.lock
 RUN pipenv install --system --ignore-pipfile --dev
 
 # Copy entrypoint.prod.sh
-COPY ./config/entrypoint.prod.sh /usr/src/dist/config/entrypoint.prod.sh
+COPY ./conf/entrypoint.prod.sh /usr/src/dist/conf/entrypoint.prod.sh
 
 # Copy the current directory contents into the container
 COPY . /usr/src/dist
 
 # Run entrypoint.sh
-ENTRYPOINT ["/usr/src/dist/config/entrypoint.prod.sh"]
+ENTRYPOINT ["/usr/src/dist/conf/entrypoint.prod.sh"]
