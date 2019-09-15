@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+
+  django:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/dist/
+    ports:
+      - 8000:8000
+    environment:
+      - DEBUG=1
+      - SECRET_KEY=foo
+      - SQL_ENGINE=django.db.backends.postgresql
+      - SQL_DATABASE=postgres_dev
+      - SQL_USER=postgres
+      - SQL_PASSWORD=postgres
+      - SQL_HOST=database
+      - SQL_PORT=5432
+      - DATABASE=postgres
+    depends_on:
+      - database
+    networks:
+      - database_network
+
+  database:
+    image: postgres:11-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres_dev
+    networks:
+      - database_network
+
+volumes:
+  postgres_data:
+
+networks:
+  database_network:
+    driver: bridge
