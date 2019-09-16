@@ -10,7 +10,6 @@ services:
     ports:
       - 8000:8000
     environment:
-      - DEBUG=1
       - SECRET_KEY=foo
       - SQL_ENGINE=django.db.backends.postgresql
       - SQL_DATABASE=postgres_dev
