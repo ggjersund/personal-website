@@ -9,8 +9,8 @@ services:
       - 443:443
     volumes:
       - ./conf/nginx:/etc/nginx/conf.d
-      - static_volume:/usr/src/dist/src/var/static
-      - media_volume:/usr/src/dist/src/var/media
+      - static_volume:/usr/src/dist/var/static
+      - media_volume:/usr/src/dist/var/media
     depends_on:
       - django
     networks:
@@ -22,8 +22,8 @@ services:
       dockerfile: Dockerfile.prod
     command: gunicorn src.core.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - static_volume:/usr/src/dist/src/var/static
-      - media_volume:/usr/src/dist/src/var/media
+      - static_volume:/usr/src/dist/var/static
+      - media_volume:/usr/src/dist/var/media
     expose:
       - 8000
     env_file: ./conf/django/.env

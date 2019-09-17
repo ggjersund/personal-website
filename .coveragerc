@@ -1,4 +1,4 @@
 [run]
 omit =
-  src/core/wsgi.py
-  src/manage.py
+  core/wsgi.py
+  manage.py
