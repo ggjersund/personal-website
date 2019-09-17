@@ -3,16 +3,27 @@ cache: pip
 python:
   - 3.7
 
-# Install dependencies
+
 install:
   - pip install pipenv
   - pipenv install --ignore-pipfile --deploy
 
-# Run tests
-script:
-  - coverage run --source='.' -m pytest
-  - coverage report -m
 
-# Report code coverage
-after_success:
-  - coveralls
+jobs:
+  include:
+    # Run tests, check coverage and report
+    - stage: test
+      script:
+        - coverage run --source='.' -m pytest
+        - coverage report -m
+      after_success:
+        - coveralls
+    # Deploy code
+    - stage: deploy
+      script:
+        - echo 'Deploy to Digitalocean'
+
+stages:
+  - name: test
+  - name: deploy
+    if: branch = master

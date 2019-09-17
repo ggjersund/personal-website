@@ -6,7 +6,7 @@ from . base import *
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['gjersund.com', 'www.gjersund.com', '88.95.106.115']
 
@@ -21,5 +21,3 @@ SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 
 X_FRAME_OPTIONS = 'SAME-ORIGIN'
-
-#PREPEND_WWW = True
