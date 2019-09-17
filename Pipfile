@@ -4,13 +4,19 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
+Django = "*"
 gunicorn = "*"
 pytest = "*"
 coverage = "*"
 coveralls = "*"
+pytest-django = "*"
+pytest-cov = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.7"
+
+[packages.e1839a8]
+path = "."
+editable = true
