@@ -26,7 +26,7 @@ jobs:
         - echo 'Deploy to Digitalocean'
 
 stages:
-  - name: test
   - name: lint
+  - name: test
   - name: deploy
     if: type = push AND branch = master
