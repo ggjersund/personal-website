@@ -1,8 +1,13 @@
+"""
+Core URL tests
+"""
+
 from django.urls import reverse, resolve
 
 
-class TestUrls:
-
-    def test_index_url(self):
-        path = reverse('index')
-        assert resolve(path).view_name == 'index'
+def test_index_url():
+    """
+    Test if index url is index
+    """
+    path = reverse('index')
+    assert resolve(path).view_name == 'index'

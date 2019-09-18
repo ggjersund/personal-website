@@ -21,3 +21,15 @@ SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 
 X_FRAME_OPTIONS = 'SAME-ORIGIN'
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.2/howto/static-files/
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'var/static')
+
+
+# Media files (User uploaded content)
+# https://docs.djangoproject.com/en/2.2/topics/files/
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'var/media')

@@ -11,6 +11,9 @@ coverage = "*"
 coveralls = "*"
 pytest-django = "*"
 pytest-cov = "*"
+pylint = "*"
+pylint-django = "*"
+pylint-runner = "*"
 
 [dev-packages]
 
