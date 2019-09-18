@@ -17,7 +17,7 @@ jobs:
         - pylint_runner
     - stage: test
       script:
-        - coverage run --source='.' -m pytest
+        - pytest  --cov='.' .
         - coverage report -m --fail-under=80
         - coveralls
     # Deploy code
