@@ -16,7 +16,7 @@ To start the development environment you only need to have `docker` and `docker-
 
 
 ### Testing & Coverage
-Tests are automatically run when pushing commits on any branch. `pytest` is used in combination with required Django plugins for running tests. Test coverage is run using `coverage`. To manually run, make sure you have activated the `pipenv` environment using `pipenv shell` and type `coverage run --source='.' -m pytest` from the repository root. To check the coverage report simply type `coverage report -m`. For checking code standards `pylint_runner` is used. All code must conform to PEP-8 and 10/10 is required to pass tests.
+Tests are automatically run when pushing commits on any branch. `pytest` is used in combination with required Django plugins for running tests. Test coverage is run using `coverage`. To manually run, make sure you have activated the `pipenv` environment using `pipenv shell` and type `coverage run --source='.' -m pytest` from the repository root. To check the coverage report simply type `coverage report -m`. A minimum requirement for code coverage is 80%. For checking code standards `pylint_runner` is used. All code must conform to PEP-8 and 10/10 is required to pass tests.
 
 
 ### Deployment
