@@ -12,6 +12,9 @@ install:
 jobs:
   include:
     # Run tests, check coverage and report
+    - stage: lint
+      script:
+        - pylint_runner
     - stage: test
       script:
         - coverage run --source='.' -m pytest
@@ -24,5 +27,6 @@ jobs:
 
 stages:
   - name: test
+  - name: lint
   - name: deploy
     if: type = push AND branch = master
