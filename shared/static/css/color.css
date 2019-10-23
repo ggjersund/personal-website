@@ -1,0 +1,38 @@
+/* Background colors */
+.bg-black {
+  background-color: #000000;
+}
+.bg-blue {
+  background-color: #003049;
+}
+.bg-red {
+  background-color: #d62828;
+}
+.bg-orange {
+  background-color: #f77f00;
+}
+.bg-yellow {
+  background-color: #fcbf49;
+}
+.bg-gray {
+  background-color: #f0f0f0;
+}
+.bg-white {
+  background-color: #ffffff;
+}
+
+/* Text colors */
+.text-black {
+  color: #000000;
+}
+.text-white {
+  color: #ffffff;
+}
+.text-muted {
+  color: #aeaeae;
+}
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
