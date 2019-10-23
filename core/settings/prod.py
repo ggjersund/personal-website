@@ -2,6 +2,9 @@
 Environment dependent settings: Production
 """
 
+# Deployment checklist
+# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
+
 from . base import *
 
 
@@ -21,6 +24,10 @@ SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 
 X_FRAME_OPTIONS = 'SAME-ORIGIN'
+
+ENVIRONMENT_NAME = 'Production'
+
+ENVIRONMENT_COLOR = 'red'
 
 
 # Static files (CSS, JavaScript, Images)

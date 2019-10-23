@@ -16,6 +16,10 @@ SECURE_BROWSER_XSS_FILTER = True
 
 X_FRAME_OPTIONS = 'SAME-ORIGIN'
 
+ENVIRONMENT_NAME = 'Development'
+
+ENVIRONMENT_COLOR = 'gray'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
