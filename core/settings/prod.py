@@ -2,13 +2,16 @@
 Environment dependent settings: Production
 """
 
+# Deployment checklist
+# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
+
 from . base import *
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['gjersund.com', 'www.gjersund.com', '88.95.106.115']
+ALLOWED_HOSTS = ['gjersund.com', 'www.gjersund.com']
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 
@@ -21,6 +24,10 @@ SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 
 X_FRAME_OPTIONS = 'SAME-ORIGIN'
+
+ENVIRONMENT_NAME = 'Production'
+
+ENVIRONMENT_COLOR = 'red'
 
 
 # Static files (CSS, JavaScript, Images)
