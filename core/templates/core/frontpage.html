@@ -6,23 +6,12 @@
 {% block header %}{% include "header.html" %}{% endblock %}
 
 {% block content %}
-<div class="container">
-  <div class="row">
-    <div class="col-4">
-      <p>Hostname: {{ hostname }}</p>
-    </div>
-    <div class="col-8">
-      <div class="row">
-        <div class="col-12 text-center p-1"><h3>The websites color palette:</h3></div>
-        <div class="col-12 bg-black text-white text-center p-1"><strong>Black</strong></div>
-        <div class="col-12 bg-blue text-white text-center p-1"><strong>Blue</strong></div>
-        <div class="col-12 bg-red text-white text-center p-1"><strong>Red</strong></div>
-        <div class="col-12 bg-orange text-black text-center p-1"><strong>Orange</strong></div>
-        <div class="col-12 bg-yellow text-black text-center p-1"><strong>Yellow</strong></div>
-        <div class="col-12 bg-gray text-black text-center p-1"><strong>Light</strong></div>
-        <div class="col-12 bg-white text-black text-center p-1"><strong>White</strong></div>
-      </div>
-    </div>
+<div class="row">
+  {% include "sidebar.html" %}
+  <div class="content-column">
+    {% include "core/header.html" %}
+    {% include "core/content.html" %}
+    {% include "core/footer.html" %}
   </div>
 </div>
 {% endblock%}
