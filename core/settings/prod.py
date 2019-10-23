@@ -8,7 +8,7 @@ from . base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['gjersund.com', 'www.gjersund.com', '88.95.106.115']
+ALLOWED_HOSTS = ['gjersund.com', 'www.gjersund.com']
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 
