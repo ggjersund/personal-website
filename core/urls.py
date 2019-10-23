@@ -2,11 +2,11 @@
 Core urls
 """
 from django.conf.urls.i18n import i18n_patterns
-from django_otp.admin import OTPAdminSite
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.conf import settings
 from django.urls import path
+from django_otp.admin import OTPAdminSite
 
 from . views import frontpage
 
