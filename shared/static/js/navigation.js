@@ -1,20 +1,22 @@
 /* Toggle sidebar in mobile-mode */
-function sidebarToggle(element, event) {
-  event.preventDefault();
-  element.classList.toggle("active");
-  var sidebars = document.getElementsByClassName("sidebar");
-  var j;
-  for (j=0;j<sidebars.length;j++) {
-    sidebars[j].classList.toggle("d-block");
-  }
+var toggle = document.getElementsByClassName("sidebar-toggle");
+for (let i=0;i<toggle.length;i++) {
+  toggle[i].addEventListener("click", function(ev) {
+    ev.preventDefault();
+    toggle[i].classList.toggle("active");
+    let sidebars = document.getElementsByClassName("sidebar");
+    for (let j=0;j<sidebars.length;j++) {
+      sidebars[j].classList.toggle("d-block");
+    }
+  });
 }
 /* Toggle sidebar dropdown menus */
 var dropdown = document.getElementsByClassName("sidebar-dropdown-btn");
-for (var i = 0; i < dropdown.length; i++) {
+for (let i=0;i<dropdown.length;i++) {
   dropdown[i].addEventListener("click", function(ev) {
     ev.preventDefault();
     this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
+    let dropdownContent = this.nextElementSibling;
     dropdownContent.classList.toggle("d-block");
   });
 }
