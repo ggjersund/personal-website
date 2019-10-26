@@ -13,7 +13,10 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/reboot.min.css' %}"/>
         <link rel="stylesheet" type="text/css" href="{% static 'css/grid.css' %}"/>
         <link rel="stylesheet" type="text/css" href="{% static 'css/color.css' %}"/>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/extra.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/content.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}"/>
         {% block stylesheet %}{% endblock %}
         <!-- extra -->
         {% block extra %}{% endblock %}
@@ -24,6 +27,7 @@
         {% block content %}{% endblock %}
         {% block footer %}{% endblock %}
         <!-- javascript -->
+        <script src="{% static 'js/sidebar.js' %}"></script>
         {% block javascript %}{% endblock %}
     </body>
 </html>

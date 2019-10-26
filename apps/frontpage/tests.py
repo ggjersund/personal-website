@@ -1,13 +1,8 @@
-"""
-Core URL tests
-"""
-
+from django.test import TestCase
 from django.urls import reverse, resolve
 
+# Create your tests here.
 
 def test_frontpage_url():
-    """
-    Test if index url is index
-    """
-    path = reverse('frontpage')
+    path = reverse('frontpage:index')
     assert resolve(path).view_name == 'frontpage'

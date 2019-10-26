@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}Gjert Ingar Gjersund{% endblock%}
+{% block title %}Gjert{% endblock%}
 
 {% block header %}{% include "header.html" %}{% endblock %}
 
@@ -9,9 +9,9 @@
 <div class="row">
   {% include "sidebar.html" %}
   <div class="content-column">
-    {% include "core/header.html" %}
-    {% include "core/content.html" %}
-    {% include "core/footer.html" %}
+    {% include "journal/header.html" %}
+    {% include "journal/content.html" %}
+    {% include "journal/footer.html" %}
   </div>
 </div>
 {% endblock%}

@@ -1,24 +1,27 @@
 {% load i18n %}
-<nav class="sidebar border-black">
+<nav class="sidebar">
   <ul class="sidebar-navigation">
     <li><a href="#">Home</a></li>
-    <li><a href="#">Articles</a></li>
+    <li><a href="#">Journal</a></li>
     <li><a href="#">Projects</a></li>
     <li><a href="#">Software</a></li>
     <li><a href="#">About me</a></li>
     <li><a href="#">Contact me</a></li>
+    <li>
+      <a href="#" class="sidebar-dropdown-btn" role="button" data-toggle="dropdown">Languages</a>
+      <div class="sidebar-dropdown-container d-none">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+        <form class="mb-1" action="{% url 'set_language' %}" method="post">
+          {% csrf_token %}
+          <input name="next" type="hidden" value="{{ redirect_to }}">
+          <input name="language" type="hidden" value="{{ language.code }}">
+          <input type="submit" value="{{ language.name_local }}" class="sidebar-dropdown-item text-left"/>
+        </form>
+        {% endfor %}
+      </div>
+    </li>
   </ul>
-  <form class="mb-1" action="{% url 'set_language' %}" method="post">{% csrf_token %}
-    <input name="next" type="hidden" value="{{ redirect_to }}">
-    <select class="small shadow-sm" name="language" onchange="this.form.submit()">
-      {% get_current_language as LANGUAGE_CODE %}
-      {% get_available_languages as LANGUAGES %}
-      {% get_language_info_list for LANGUAGES as languages %}
-      {% for language in languages %}
-        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-            {{ language.name_local }} ({{ language.code }})
-        </option>
-      {% endfor %}
-    </select>
-  </form>
 </nav>

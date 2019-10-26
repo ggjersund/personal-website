@@ -1,0 +1,5 @@
+.content-sidebar {
+  border-width: 0px 0px 0px 1px;
+  border-style: solid;
+  z-index: 300;
+}

@@ -8,8 +8,6 @@ from django.conf import settings
 from django.urls import path, include
 from django_otp.admin import OTPAdminSite
 
-from . views import frontpage
-
 admin.site.__class__ = OTPAdminSite
 admin.site.site_header = "Personal Website Administration"
 admin.site.site_title = "Personal Website Administration"
@@ -19,7 +17,10 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    path('', frontpage, name='frontpage'),
+    path('', include('apps.frontpage.urls', namespace='frontpage')),
+    path('', include('apps.journal.urls', namespace='journal')),
+    path('', include('apps.projects.urls', namespace='projects')),
+    path('', include('apps.software.urls', namespace='software')),
     path('administration/', admin.site.urls),
 )
 

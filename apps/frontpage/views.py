@@ -8,4 +8,4 @@ def frontpage(request):
     """
     Index view
     """
-    return render(request, 'core/frontpage.html', {'hostname': socket.gethostname()})
+    return render(request, 'frontpage/frontpage.html', {'hostname': socket.gethostname()})
