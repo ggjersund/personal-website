@@ -3,13 +3,13 @@
   <ul class="sidebar-navigation">
     <li><a href="#">Home</a></li>
     <li><a href="#">Journal</a></li>
+    <li><a href="#">Articles</a></li>
     <li><a href="#">Projects</a></li>
     <li><a href="#">Software</a></li>
-    <li><a href="#">About me</a></li>
     <li><a href="#">Contact me</a></li>
     <li>
       <a href="#" class="sidebar-dropdown-btn" role="button" data-toggle="dropdown">Languages</a>
-      <div class="sidebar-dropdown-container d-none">
+      <div class="sidebar-dropdown-container">
         {% get_current_language as LANGUAGE_CODE %}
         {% get_available_languages as LANGUAGES %}
         {% get_language_info_list for LANGUAGES as languages %}

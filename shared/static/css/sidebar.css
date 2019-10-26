@@ -3,6 +3,20 @@
   padding: 0;
   list-style-type: none;
 }
+.sidebar-toggle {
+  padding: 5px;
+  color: #000;
+  outline: none;
+  text-decoration: none;
+}
+.sidebar-toggle:hover {
+  color: #000;
+  outline: none;
+  text-decoration: none;
+}
+.sidebar-toggle.active {
+  color: #aeaeae;
+}
 .sidebar-navigation li>a {
   display: block;
   padding: 10px;
@@ -27,6 +41,9 @@
 .sidebar-dropdown-btn.active::after {
   border-width: 6px 6px 0px 6px;
   margin-top: 9px;
+}
+.sidebar-dropdown-container {
+  display: none;
 }
 .sidebar-dropdown-item {
   display: block;
