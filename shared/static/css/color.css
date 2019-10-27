@@ -22,7 +22,7 @@
   }
   /* Sidebar - Dark mode */
   .sidebar {
-    border-right: 1px solid #1b1b1b;
+    border-color: transparent #1b1b1b transparent transparent;
   }
   .sidebar-toggle {
     color: #ffffff;
@@ -56,9 +56,17 @@
     border-color: #fff transparent transparent transparent;
   }
   /* Content - Dark mode */
+  .sub-header {
+    background-color: #242424;
+    border-color: transparent transparent #1b1b1b transparent;
+  }
   .content-sidebar {
     background-color: #242424;
     border-color: transparent transparent transparent #1b1b1b;
+  }
+  .sub-footer {
+    background-color: #242424;
+    border-color: #1b1b1b transparent transparent transparent;
   }
   /* Footer - Dark mode */
   .footer {
@@ -70,18 +78,19 @@
 @media (prefers-color-scheme: light) {
   /* Header - Light mode */
   .header {
-    background-color: #f0f0f0;
-    border-color: transparent transparent #dfdfdf transparent;
+    color: #ffffff;
+    background-color: #003049;
+    border-color: transparent transparent #001b29 transparent;
   }
   /* Sidebar - Light mode */
   .sidebar {
-    border-right: 1px solid #dfdfdf;
+    border-color: transparent #dfdfdf transparent transparent;
   }
   .sidebar-toggle {
-    color: #000000;
+    color: #ffffff;
   }
   .sidebar-toggle:hover {
-    color: #111111;
+    color: #e9e8e8;
   }
   .sidebar-toggle.active {
     color: #939393;
@@ -100,7 +109,7 @@
   .sidebar .sidebar-navigation li>a:hover,.sidebar-dropdown-item:hover {
     color: #000000;
     background-color: #dedddd;
-    border-color: transparent transparent #f77f00 transparent;
+    border-color: transparent transparent #003049 transparent;
   }
   .sidebar .sidebar-dropdown-btn::after {
     border-color: transparent transparent transparent #000;
@@ -109,9 +118,17 @@
     border-color: #000 transparent transparent transparent;
   }
   /* Content - Light mode */
+  .sub-header {
+    background-color: #f0f0f0;
+    border-color: transparent transparent #dfdfdf transparent;
+  }
   .content-sidebar {
     background-color: #f0f0f0;
     border-color: transparent transparent transparent #dfdfdf;
+  }
+  .sub-footer {
+    background-color: #f0f0f0;
+    border-color: #dfdfdf transparent transparent transparent;
   }
   /* Footer - Light mode */
   .footer {

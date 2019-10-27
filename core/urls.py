@@ -22,6 +22,7 @@ urlpatterns += i18n_patterns(
     path(_('journal/'), include('apps.journal.urls', namespace='journal')),
     path(_('projects/'), include('apps.projects.urls', namespace='projects')),
     path(_('software/'), include('apps.software.urls', namespace='software')),
+    path(_('articles/'), include('apps.articles.urls', namespace='articles')),
     path('administration/', admin.site.urls),
 )
 

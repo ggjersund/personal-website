@@ -1,9 +1,9 @@
 {% load i18n %}
-{% get_current_language as LANGUAGE_CODE %}
 <nav class="sidebar">
   <ul class="sidebar-navigation">
     <li><a href="{% url 'frontpage:index' %}"><i class="fas fa-home fa-fw"></i> {% trans "Home" %}</a></li>
     <li><a href="{% url 'journal:index' %}"><i class="fas fa-book fa-fw"></i> {% trans "Journal" %}</a></li>
+    <li><a href="{% url 'articles:index' %}"><i class="fas fa-rss fa-fw"></i> {% trans "Articles" %}</a></li>
     <li><a href="{% url 'projects:index' %}"><i class="fas fa-project-diagram fa-fw"></i> {% trans "Projects" %}</a></li>
     <li><a href="{% url 'software:index' %}"><i class="fas fa-hdd fa-fw"></i> {% trans "Software" %}</a></li>
     <li>

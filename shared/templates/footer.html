@@ -1,3 +1,4 @@
-<footer class="footer bg-gray">
-  <p class="text-center text-muted text-small margin-1">Gjert &#169; All rights reserved.</p>
+{% load i18n %}
+<footer class="footer text-center padding-3">
+  <p class="text-muted text-small margin-0">{% now "Y" %} &#169; Gjert | <a class="text-muted" href="#">{% trans "Sitemap" %}</a></p>
 </footer>

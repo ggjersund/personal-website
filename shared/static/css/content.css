@@ -1,5 +1,21 @@
+.sub-header {
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  padding: 5px 20px;
+  z-index: 400;
+}
 .content-sidebar {
   border-width: 0px 0px 0px 1px;
   border-style: solid;
   z-index: 300;
+}
+.content-field {
+  padding: 5px 20px;
+  z-index: 200;
+}
+.sub-footer {
+  border-width: 1px 0px 0px 0px;
+  border-style: solid;
+  padding: 5px 20px;
+  z-index: 400;
 }

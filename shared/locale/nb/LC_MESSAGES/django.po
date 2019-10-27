@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-27 18:35+0100\n"
+"POT-Creation-Date: 2019-10-27 22:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,13 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: shared/templates/sidebar.html:5
+
+#: shared/templates/footer.html:3
+msgid "Sitemap"
+msgstr "Sidekart"
+
+#: shared/templates/sidebar.html:4
 msgid "Home"
 msgstr "Hjem"
 
-#: shared/templates/sidebar.html:6
+#: shared/templates/sidebar.html:5
 msgid "Journal"
 msgstr "Dagbok"
+
+#: shared/templates/sidebar.html:6
+msgid "Articles"
+msgstr "Artikler"
 
 #: shared/templates/sidebar.html:7
 msgid "Projects"

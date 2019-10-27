@@ -25,10 +25,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Internaly developed applications
+    'core',
     'apps.frontpage',
     'apps.journal',
     'apps.projects',
     'apps.software',
+    'apps.articles',
     # Externaly developed applications
     'django_otp',
     'django_otp.plugins.otp_totp',

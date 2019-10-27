@@ -1,10 +1,14 @@
+.sidebar {
+  border-width: 0px 1px 0px 0px;
+  border-style: solid;
+}
 .sidebar-navigation {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 .sidebar-toggle {
-  padding: 5px;
+  padding: 10px;
   outline: none;
   text-decoration: none;
 }
@@ -17,7 +21,7 @@
   padding: 10px;
   width: 100%;
   text-decoration: none;
-  border-width: 0px 0px 2px 0px;
+  border-width: 0px 0px 3px 0px;
   border-style: solid;
 }
 .sidebar-dropdown-btn {
@@ -45,7 +49,7 @@
   width: 100%;
   text-decoration: none;
   padding: 10px 10px 10px 30px;
-  border-width: 0px 0px 2px 0px;
+  border-width: 0px 0px 3px 0px;
   border-style: solid;
 }
 .sidebar-dropdown-item:hover {

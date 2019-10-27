@@ -1,5 +1,16 @@
 .header {
   border-width: 0px 0px 1px 0px;
+  padding: 5px 5px;
   border-style: solid;
   z-index: 600;
+}
+.header-brand {
+  color: #ffffff;
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+.header-brand:hover {
+  color: #e7e7e7;
+  text-decoration: none;
 }
