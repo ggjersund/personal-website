@@ -24,6 +24,15 @@
   .sidebar {
     border-right: 1px solid #1b1b1b;
   }
+  .sidebar-toggle {
+    color: #ffffff;
+  }
+  .sidebar-toggle:hover {
+    color: #e9e6e6;
+  }
+  .sidebar-toggle.active {
+    color: #636363;
+  }
   .sidebar,.sidebar-navigation {
     background-color: #242424;
   }
@@ -67,6 +76,15 @@
   /* Sidebar - Light mode */
   .sidebar {
     border-right: 1px solid #dfdfdf;
+  }
+  .sidebar-toggle {
+    color: #000000;
+  }
+  .sidebar-toggle:hover {
+    color: #111111;
+  }
+  .sidebar-toggle.active {
+    color: #939393;
   }
   .sidebar,.sidebar-navigation {
     background-color: #f0f0f0;
