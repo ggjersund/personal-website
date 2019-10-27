@@ -2,14 +2,12 @@
 {% get_current_language as LANGUAGE_CODE %}
 <nav class="sidebar">
   <ul class="sidebar-navigation">
-    <li><a href=".">Home</a></li>
-    <li><a href="#">Journal</a></li>
-    <li><a href="#">Articles</a></li>
-    <li><a href="#">Projects</a></li>
-    <li><a href="#">Software</a></li>
-    <li><a href="#">Contact me</a></li>
+    <li><a href="{% url 'frontpage:index' %}"><i class="fas fa-home fa-fw"></i> {% trans "Home" %}</a></li>
+    <li><a href="{% url 'journal:index' %}"><i class="fas fa-book fa-fw"></i> {% trans "Journal" %}</a></li>
+    <li><a href="{% url 'projects:index' %}"><i class="fas fa-project-diagram fa-fw"></i> {% trans "Projects" %}</a></li>
+    <li><a href="{% url 'software:index' %}"><i class="fas fa-hdd fa-fw"></i> {% trans "Software" %}</a></li>
     <li>
-      <a href="#" class="sidebar-dropdown-btn" role="button" data-toggle="dropdown">Languages</a>
+      <a href="#" class="sidebar-dropdown-btn" role="button" data-toggle="dropdown"><i class="fas fa-globe-europe fa-fw"></i> {% trans "Languages" %}</a>
       <div class="sidebar-dropdown-container">
         {% get_available_languages as LANGUAGES %}
         {% get_language_info_list for LANGUAGES as languages %}

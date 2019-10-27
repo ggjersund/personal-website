@@ -1,6 +1,7 @@
 """
 Core urls
 """
+from django.utils.translation import gettext_lazy as _
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -18,9 +19,9 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', include('apps.frontpage.urls', namespace='frontpage')),
-    path('', include('apps.journal.urls', namespace='journal')),
-    path('', include('apps.projects.urls', namespace='projects')),
-    path('', include('apps.software.urls', namespace='software')),
+    path(_('journal/'), include('apps.journal.urls', namespace='journal')),
+    path(_('projects/'), include('apps.projects.urls', namespace='projects')),
+    path(_('software/'), include('apps.software.urls', namespace='software')),
     path('administration/', admin.site.urls),
 )
 

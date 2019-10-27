@@ -1,3 +1,11 @@
+"""
+Core views
+"""
+import socket
 from django.shortcuts import render
 
-# Create your views here.
+def frontpage(request):
+    """
+    Index view
+    """
+    return render(request, 'journal/journal.html', {'hostname': socket.gethostname()})

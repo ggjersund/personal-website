@@ -107,6 +107,10 @@ LANGUAGES = [
   ('nb', 'Norsk'),
 ]
 
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'shared/locale')
+]
+
 TIME_ZONE = 'Europe/Oslo'
 
 USE_I18N = True
