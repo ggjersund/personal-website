@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}Gjert{% endblock%}
+{% block title %}{% trans "Software" %}{% endblock%}
 
 {% block header %}{% include "header.html" %}{% endblock %}
 
@@ -9,9 +9,21 @@
 <div class="row">
   {% include "sidebar.html" %}
   <div class="content-column">
-    {% include "software/header.html" %}
-    {% include "software/content.html" %}
-    {% include "software/footer.html" %}
+    <header class="sub-header">
+      <h1 class="margin-0">{% trans "Software" %}</h1>
+    </header>
+    <main class="content row">
+      <div class="content-field">
+        <h1>Content</h1>
+        <p>Hostname: {{ hostname }}</p>
+      </div>
+      <div class="content-sidebar">
+        <h1>Top articles this month</h1>
+      </div>
+    </main>
+    <footer class="sub-footer">
+      <h1>Sub footer</h1>
+    </footer>
   </div>
 </div>
 {% endblock%}
