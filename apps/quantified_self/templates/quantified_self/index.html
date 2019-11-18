@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}Quantified self{% endblock%}
+
+{% block header %}{% include "header.html" %}{% endblock %}
+
+{% block content %}
+<div class="row">
+  {% include "sidebar.html" %}
+  <div class="content-column">
+    <header class="sub-header">
+      <h1 class="margin-0">Quantified self</h1>
+    </header>
+    <main class="content row">
+      <div class="content-field">
+        <h1>Content</h1>
+        <p>Hostname: {{ hostname }}</p>
+      </div>
+    </main>
+    <footer class="sub-footer">
+      <h1>Sub footer</h1>
+    </footer>
+  </div>
+</div>
+{% endblock%}
+
+{% block footer %}{% include "footer.html" %}{% endblock %}
