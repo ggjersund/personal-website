@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'apps.projects',
     'apps.software',
     'apps.articles',
+    'apps.quantified_self',
     # Externaly developed applications
     'django_otp',
     'django_otp.plugins.otp_totp',

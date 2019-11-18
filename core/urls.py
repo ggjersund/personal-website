@@ -23,6 +23,7 @@ urlpatterns += i18n_patterns(
     path(_('projects/'), include('apps.projects.urls', namespace='projects')),
     path(_('software/'), include('apps.software.urls', namespace='software')),
     path(_('articles/'), include('apps.articles.urls', namespace='articles')),
+    path(_('quantified-self/'), include('apps.quantified_self.urls', namespace='quantified_self')),
     path('administration/', admin.site.urls),
 )
 
