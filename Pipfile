@@ -16,6 +16,7 @@ pylint-django = "*"
 pylint-runner = "*"
 django-otp = "*"
 qrcode = "*"
+django = "*"
 
 [dev-packages]
 
